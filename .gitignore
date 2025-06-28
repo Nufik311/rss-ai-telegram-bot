@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+sent_links.txt
+log_kz.txt

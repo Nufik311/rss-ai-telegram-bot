@@ -8,7 +8,6 @@ from telegram import Bot
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
-# === Загрузка переменных окружения ===
 load_dotenv()
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 CHANNEL_USERNAME = os.getenv('CHANNEL_USERNAME')
@@ -167,8 +166,6 @@ async def main_loop():
             logging.error(f"❗ Ошибка в fetch_and_send: {error_message}")
             await notify_admin(error_message)
         await asyncio.sleep(CHECK_INTERVAL)
-
-# старый main_loop ниже был заменён
 
     while True:
         await fetch_and_send()
